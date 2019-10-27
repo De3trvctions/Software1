@@ -64,5 +64,14 @@
   "menuitem_page_label": {
     "message": "Menuitem in page context menu",
     "description": "Label on checkbox to enable menuitem in page context menu"
+  } ,
+  "savemenu_headline": {
+    "message": "Save Menus",
+    "description": "Headline for save menu buttons in options page"
+  },
+  "savesession_label": {
+    "message": "Save current session data to text file",
+    "description": "Label on button to enable savesessiondata in page context menu"
   }
+
 }
