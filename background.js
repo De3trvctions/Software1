@@ -68,6 +68,14 @@ async function ClosedTabListChanged() {
   const prefs = await Storage.get();
 
   const tabs = await GetLastClosedTabs(prefs.showNumber, prefs.onlyCurrent);
+  //save session url for user to export
+  var exportData = [];
+  //clear last data of stored storage
+  window.localStorage.clear();
+  for(var i = 0; i < tabs.length; i++){
+    exportData.push(tabs[i].url);
+  }
+  window.localStorage.setItem("data",exportData);
   const max_allowed = browser.contextMenus.ACTION_MENU_TOP_LEVEL_LIMIT - (prefs.showClearList ? 1 : 0);
 
   // This block is for creating the "page" or "tab" context menus.
