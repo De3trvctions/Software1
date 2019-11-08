@@ -102,7 +102,7 @@ function writeFile(){
     console.log("done");//for debugging 
   }
   //simple error log for debug
-  catch{
+  catch(error){
     console.log(error);
   }
 }
@@ -111,7 +111,7 @@ function writeFile(){
 function encode ( string ){
   var output = [];
   for ( var i = 0; i < string.length; i++ ) {
-    out[i] = s.charCodeAt(i);
+    output[i] = string.charCodeAt(i);
   }
   return new Uint8Array( output );
 }
